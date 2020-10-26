@@ -4,7 +4,6 @@ const loader = document.getElementById('loader');
 let ready = false;
 let imagesLoaded = 0;
 let totalImage = 0;
-let photosArray = [];
 
 let photosArray = [];
 //Check if all images loaded
