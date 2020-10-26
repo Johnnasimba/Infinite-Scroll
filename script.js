@@ -13,6 +13,7 @@ function imageLoaded() {
     imagesLoaded++;
     if(imagesLoaded === totalImage) {
         ready = true
+        loader.hidden = true;
     }
 }
 // Helper Function to set attributes on DOM Element
@@ -50,7 +51,7 @@ function displayPhotos() {
 }
 
 // Unsplash API
-const count = 50;
+const count = 30;
 const apiKey = 'TSXb2m5KStsjKdrAoTVX3smhXdX6IiAMne4c9BgAPYY';
 
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
