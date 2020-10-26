@@ -9,7 +9,7 @@ let photosArray = [];
 let photosArray = [];
 //Check if all images loaded
 function imageLoaded() {
-    console.log('image loaded');
+    
     imagesLoaded++;
     if(imagesLoaded === totalImage) {
         ready = true
@@ -24,6 +24,7 @@ function setAttributes(element, attributes) {
 
 // Create Elements for Links and photos, Add to Dom
 function displayPhotos() {
+    imagesLoaded = 0;
     totalImage = photosArray.length;
     // Run function for each object in photosArray
     photosArray.forEach(photo => {
@@ -66,9 +67,10 @@ async function getPhotos() {
 }
 // Check to see if scrolling near bottom of page, Load more photos
 window.addEventListener('scroll', () => {
-    if (window.innerHeight + document.body.offsetHeight - 1000) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 && ready) {
+       
+        ready = false
         getPhotos();
-        console.log('load more')
     }
 })
 
