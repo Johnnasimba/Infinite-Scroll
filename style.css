@@ -6,19 +6,21 @@ html {
 body {
   margin: 0;
   font-family: Varela, sans-serif;
-  background: whitesmoke;
+  background: rgb(39, 38, 38);
 }
 h1 {
     text-align: center;
     margin-top: 25px;
     font-size: 40px;
     margin-bottom: 0px;
+    color: #fff;
 }
 h5 {
     text-align: center;
     font-size: 20px;
     margin: auto;
-    color: rgb(134, 133, 133);
+    color: #fff;
+    opacity: 0.3;
  
 }
 /* Loader */
