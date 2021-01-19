@@ -51,9 +51,10 @@ function displayPhotos() {
 
 // Unsplash API
 const count = 30;
+const collections = 1390381;
 const apiKey = 'TSXb2m5KStsjKdrAoTVX3smhXdX6IiAMne4c9BgAPYY';
 
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&collections=${collections}&count=${count}`;
 // Get photos from Unsplash API
 
 async function getPhotos() {
